@@ -1,0 +1,49 @@
+<meta charset="UTF-8">
+
+<!-- Tag input que cria um campo para entrada de dados pelo usuário -->
+<input title="numero a ser verificado"/>
+<!-- Tag button que cria um botão na página para realizar alguma ação -->
+<button title="botão de testar", type="button", onclick="verifica()"> Testar número </button>
+
+<script>
+    function pulaLinha(quantidade = 1) {
+        for (let i = 0; i < quantidade; i++)
+            document.write("<br>");
+    }
+
+    function mostra(mensagem) {
+        document.write(mensagem);
+        pulaLinha();
+    }
+
+    function sorteia(n) {
+        return Math.round(Math.random() * n);
+    }
+
+    let numerosPensado = Array(50).fill(0).map(() => sorteia(100));
+
+    // querySelector retorna o primeiro elemento da TAG passada como parâmetro.
+    let input = document.querySelector("input");
+    input.focus();
+    
+    function verifica() {
+        let achou = false;
+        for (let i = 0; i < numerosPensado.length; i++) {
+            if (input.value == numerosPensado[i]) {
+                alert("Você acertou!");
+                achou = true;
+            }
+            // else if (input.value < numerosPensado[i])
+            //     alert("Seu numero e menor.");
+            // else if (input.value > numerosPensado[i])
+            //     alert("Seu numero e maior.");
+        }
+        if (!achou)
+            alert("Você errou!");
+        input.value = "";
+        input.focus();
+    }
+    
+    // let button = document.querySelector("button");
+    // button.onclick = verifica;
+</script>

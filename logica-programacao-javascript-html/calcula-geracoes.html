@@ -1,0 +1,17 @@
+<meta charset="UTF-8">
+
+<script>
+    function pulaLinha(quantidade = 1) {
+        for (let i = 0; i < quantidade; i++) 
+            document.write("<br>");
+    }
+
+    function mostra(mensagem) {
+        document.write(mensagem);
+        pulaLinha();
+    }
+
+    let geracoes = (2022 - 1500) / 28;
+    mostra("Se passaram " + Math.round(geracoes) + " geracoes.");
+    
+</script>

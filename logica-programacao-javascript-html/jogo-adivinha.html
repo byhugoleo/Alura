@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+
+<script>
+    function pulaLinha(quantidade = 1) {
+        for (let i = 0; i < quantidade; i++)
+            document.write("<br>");
+    }
+
+    function mostra(mensagem) {
+        document.write(mensagem);
+        pulaLinha();
+    }
+
+    function sorteia(n) {
+        return Math.round(Math.random() * n);
+    }
+
+    let numeroPensado = sorteia(10);
+
+    while (true) {
+        let chute = parseInt(prompt("Digite seu chute."));
+        
+        if (chute == numeroPensado) {
+            alert("Você acertou!");
+            break;
+        }
+        else if (chute < numeroPensado)
+            alert("Seu numero e menor.");
+        else if (chute > numeroPensado)
+            alert("Seu numero e maior.");
+    }
+</script>

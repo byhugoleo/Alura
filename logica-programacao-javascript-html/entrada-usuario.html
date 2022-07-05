@@ -1,0 +1,18 @@
+<meta charset="UTF-8">
+
+<script>
+    function pulaLinha(quantidade = 1) {
+        for (let i = 0; i < quantidade; i++)
+            document.write("<br>");
+    }
+
+    function mostra(mensagem) {
+        document.write(mensagem);
+        pulaLinha();
+    }
+    // prompt é um função para receber dados externos.
+    let x = parseInt(prompt("Digite um numero:"));
+    let y = parseInt(prompt("Digite outro numero:"));
+
+    mostra("A soma de " + x + " e " + y + " é " + (x + y));
+</script>

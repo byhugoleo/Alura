@@ -1,0 +1,18 @@
+<meta charset="UTF-8">
+
+<script>
+    function pulaLinha(quantidade = 1) {
+        for (let i = 0; i < quantidade; i++)
+            document.write("<br>");
+    }
+
+    function mostra(mensagem) {
+        document.write(mensagem);
+        pulaLinha();
+    }
+
+    let idadeAmigo = 27;
+    let idadeMinha = 23;
+
+    mostra("Nossa diferença de idade é " + (idadeAmigo - idadeMinha));
+</script>
