@@ -1,0 +1,37 @@
+<meta charset="utf-8">
+
+<!-- A tag canvas é utilizada para designar uma área na página para desenho. -->
+<canvas width="600" height="400">
+    
+</canvas>
+
+<script>
+    let tela = document.querySelector('canvas');
+    let pincel = tela.getContext('2d');
+    // fillStyle define a cor do elemento pincel.
+    pincel.fillStyle = 'lightgrey';
+    // fillRect preenche o canvas com um retângulo.
+    pincel.fillRect(0, 0, 600, 400);
+
+    pincel.fillStyle = 'green';
+    pincel.fillRect(0, 0, 200, 400);
+
+    pincel.fillStyle = 'white';
+    pincel.fillRect(200, 0, 200, 400);
+
+    pincel.fillStyle = 'darkred';
+    pincel.fillRect(400, 0, 200, 400);
+
+    pincel.fillStyle = 'yellow';
+    pincel.beginPath();
+    pincel.moveTo(200, 250);
+    pincel.lineTo(300, 100);
+    pincel.lineTo(400, 250);
+    pincel.lineTo(200, 250);
+    pincel.fill();
+
+    pincel.fillStyle = 'blue';
+    pincel.beginPath();
+    pincel.arc(300, 350, 100, 0, 2 * 3.14);
+    pincel.fill();
+</script>
